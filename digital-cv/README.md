@@ -53,4 +53,5 @@ Assignment 03 Stater
 └─ index.html
 
 ```
-# vietbdfx19816.github.io
+# vietbdfx19816.github.io/digital-cv
+Bài Assignment 3 sử dụng bootstrap 5.0.2
