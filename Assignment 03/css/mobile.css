@@ -1,0 +1,23 @@
+/* Màn hình kích thước nhỏ hơn 576px*/
+@media (max-width: 576px) {
+  section > .container {
+    max-width: 570px;
+    padding: 30px 20px;
+  }
+  nav > .container {
+    max-width: 570px;
+    padding: 0 40px;
+  }
+  nav li {
+    text-align: left;
+  }
+  .border-left {
+    border-left: none;
+  }
+  .bg-div-50 {
+    background-image: linear-gradient(to bottom, #f7f7f7 50%, #f0f0f0 50%);
+  }
+  #footer span {
+    display: none;
+  }
+}

@@ -1,0 +1,12 @@
+/* màn hình kích thước nhỏ hơn 992px*/
+@media screen and (max-width: 990px) {
+  section > .container {
+    max-width: 960px;
+    padding: 30px 20px;
+  }
+  nav > .container {
+    max-width: 960px;
+    padding: 0 40px;
+    margin: auto;
+  }
+}

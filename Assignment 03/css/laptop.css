@@ -1,0 +1,328 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap");
+
+/* GENERAL SETTING: Style chung cho trang  */
+/* main-color: #199cdb */
+/* grey-color: #495057 */
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #495057;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0; /* xóa mặc định của bootstrap */
+}
+
+a {
+  text-decoration: none;
+  color: #495057;
+}
+
+h1,
+h2 {
+  line-height: 1.1;
+  margin: 8px 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.section-title {
+  padding-bottom: 24px;
+}
+
+/* BANNER: chèn và làm mờ ảnh, căn giữa tiêu đề */
+#banner {
+  position: relative;
+}
+
+#banner:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    to top,
+    rgba(34, 34, 34, 0.5) 0%,
+    rgba(34, 34, 34, 0.5) 100%
+  );
+}
+
+#banner div {
+  color: #e9ecef;
+  text-align: center;
+}
+
+#banner .centered {
+  top: 20%;
+}
+
+/* NAV-BAR: căn giữa link và ảnh chân dung */
+nav ul {
+  margin-bottom: 0px;
+}
+
+nav li {
+  text-transform: uppercase;
+  padding: 16px 0;
+  text-align: center;
+  font-weight: 600;
+}
+
+nav i {
+  color: #199cdb;
+}
+
+.avatar {
+  position: relative;
+}
+
+.avatar img {
+  position: absolute;
+  width: 200px;
+  border: 10px solid white;
+  box-shadow: 0 0 8px rgba(34, 34, 34, 0.2);
+  border-radius: 50%;
+}
+
+/* ABOUT: Style phần thông tin và mục tiêu */
+#about .container {
+  padding-top: 60px;
+}
+
+#target,
+#personal-info {
+  padding: 20px;
+}
+
+#personal-info i {
+  color: #199cdb;
+}
+
+.info span {
+  font-weight: bold;
+}
+
+/* JOB-INFO: Trang trí các thẻ lý lịch */
+.cards {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 120px;
+  border: 1px solid #adb5bd;
+  padding: 0px 16px;
+  height: 100%;
+}
+
+.cards > i {
+  color: #adb5bd;
+  font-size: 40px;
+  margin: auto;
+}
+
+.cards h2 {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.card-contents {
+  grid-column: 1/-1;
+  margin-top: 24px;
+}
+
+.card-contents > p:first-child {
+  font-weight: 600;
+} /*in đậm phần vai trò*/
+.card-contents > p:nth-child(2) {
+  font-style: italic;
+  margin-top: -12px;
+} /*in nghiêng ngày tháng và giảm khoảng cách với phần vai trò*/
+
+#favorite .card-contents i {
+  font-size: 20px;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #199cdb;
+  color: #199cdb;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Căn giữa icon trong border*/
+  margin: 0 auto; /* Căn giữa box trong div*/
+}
+
+#language p,
+#skill p {
+  font-weight: 500;
+}
+
+/* Style thanh metter thể hiện kỹ năng */
+.skill-bar span {
+  background: #e9ecef;
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 24px;
+  height: 3px;
+  width: 52px;
+}
+
+.fundamental span:nth-child(-n + 2),
+.intermediate span:nth-child(-n + 3),
+.advanced span:nth-child(-n + 4) {
+  background-color: #199cdb;
+} /* class fundamental, intermediate, advanced có 1, 2, 3 gạch xanh */
+
+/* CERTIFICATE: Style chưng chỉ theo grid và thêm border theo yêu cầu*/
+.certs {
+  padding: 16px 0;
+}
+
+.certs p {
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 16px 0;
+}
+
+.certs img {
+  max-width: 100%;
+}
+
+.border-left {
+  border-left: 2px solid #d6c08d;
+}
+
+.border-bot {
+  border-bottom: 2px solid #d6c08d;
+}
+
+/* PROJECT: Tạo grid dự án và sắp xếp thông tin theo cột */
+.project img {
+  border-bottom: 1px solid #adb5bd;
+}
+
+.project > div:nth-child(2) {
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 4px 16px;
+}
+
+.project {
+  border: 1px solid #adb5bd;
+  height: 100%;
+  padding-bottom: 16px;
+}
+
+.pj-date {
+  align-items: center;
+  padding: 0 8px;
+  border-top: 1px solid #adb5bd;
+}
+
+.pj-date i {
+  font-size: 20px;
+  padding-left: 8px;
+  color: #adb5bd;
+}
+
+.project p {
+  margin: 8px 0;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td {
+  border-top: 1px solid #adb5bd;
+  padding: 8px;
+  vertical-align: top;
+}
+
+td:first-child {
+  width: 30%;
+}
+
+/* FOOTER: Style cho phần chân */
+#footer i {
+  font-size: 300%;
+  color: #199cdb;
+  vertical-align: middle;
+}
+
+#footer span {
+  color: #adb5bd;
+  vertical-align: middle;
+}
+
+/* UTILITY */
+.bg-grey {
+  background: #f7f7f7;
+}
+.bg-div-50 {
+  background-image: linear-gradient(to right, #f7f7f7 50%, #f0f0f0 50%);
+}
+
+/* CENTERED: Căn giữa phần tử trong container lớn 
+Cần có thêm { position: relative; } */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* DASH: Thêm gạch đầu dòng cho phần tử */
+.dash li::before {
+  content: "-";
+  padding-right: 4px;
+}
+
+/* HIGHLIGHT: Tạo viền xanh cho ngày tháng cần chú ý */
+span.highlight {
+  color: #e9ecef;
+  background-color: #199cdb;
+  border-radius: 20px;
+  padding: 4px 12px;
+}
+
+/* BULLET-POINT: Tạo chấm đầu dòng cho div */
+.bullet-point {
+  position: relative;
+  margin-left: 20px;
+}
+
+.bullet-point::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #199cdb;
+  border-radius: 50%;
+  left: -18px;
+  top: 8px;
+}
+
+/* Kích thước container reponsive */
+section > .container {
+  max-width: 1170px;
+  padding: 30px 50px;
+  margin-bottom: 20px;
+}
+nav > .container {
+  max-width: 1170px;
+  padding: 0 50px;
+}

@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #495057;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+h1,
+h2 {
+  line-height: 1.1;
+  padding-bottom: 12px;
+}
+
+h3 {
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+i {
+  font-size: 24px;
+}
+
+/* Phần project: trang trí trang project.html */
+h2 {
+  color: #0000ff;
+  border-bottom: 2px solid #d0dede;
+  margin-bottom: 8px;
+}
+
+.goals,
+.scopes,
+.primary,
+.team,
+.timeline {
+  background-color: #f0f8ff;
+  padding: 8px;
+}
+
+.container > div {
+  background-color: #0000ff;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 12px;
+}
+
+div > p:first-child {
+  font-weight: bold;
+  padding-top: 8px;
+}
+
+.goals {
+  grid-column: 1 / span(2);
+}
+
+.goals .grid {
+  grid-template-columns: 70px auto;
+  border-bottom: 1px solid #e0e8ed;
+}
+
+.scopes {
+  grid-column: 1 / span(2);
+  grid-row: 2/3;
+}
+
+.scopes .grid {
+  grid-template-columns: 1fr 1fr;
+}
+
+.timeline {
+  grid-column: 3/4;
+  grid-row: 1/3;
+}
+.timeline .grid div:nth-child(2n) {
+  border-bottom: 3px dotted #aadee4;
+}
+
+/* Utility: câc class ứng dụng */
+.number {
+  width: 40px;
+  height: 40px;
+  color: #f0f8ff;
+  background-color: #9e88ff;
+  border-radius: 50%;
+  border: 1px solid #736d8a;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 50px auto;
+  align-items: center;
+  gap: 8px;
+}
+.grid i {
+  justify-self: center;
+  align-self: start;
+  padding-top: 8px;
+}
+
+/* Kích thước container reponsive */
+.container {
+  max-width: 1320px;
+  padding: 30px 0;
+  margin: auto;
+}
+
+/* Kích thước màn nhỏ hơn 1400px */
+@media screen and (max-width: 1400px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* Kích thước màn nhỏ hơn 1200px */
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+  .grid {
+    grid-template-columns: 40px auto;
+  }
+}
+
+/* kích thước màn tablet */
+@media (max-width: 768px) {
+  .container {
+    max-width: 540px;
+    padding: 30px 20px;
+  }
+  .container > div {
+    grid-template-columns: 1fr;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .scopes .grid,
+  .goals .grid {
+    grid-template-columns: 1fr;
+  }
+  .goals,
+  .timeline,
+  .scopes {
+    grid-row: unset;
+    grid-column: unset;
+  } /* vị trí mặc định cho các cột */
+  .number {
+    justify-self: unset;
+  }
+}
+
+/* kích thước màn mobile */
+@media (max-width: 576px) {
+  .container {
+    max-width: 100%;
+    padding: 30px;
+  }
+}
